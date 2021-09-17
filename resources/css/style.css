@@ -1,5 +1,4 @@
 /* generali */
-
 * {
     margin: 0;
     padding: 0;
@@ -16,21 +15,31 @@ body {
     margin: 0 auto;
 }
 
-/* regole generali navbar */
-.navbar {
+.layer {
     width: 100%;
-    /* height: 100px; */
-    /* debugging */
-    background-color: rgb(207, 129, 207);
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+    height: 500px;
 }
 
+img {
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* regole navbar */
 nav ul {
     padding: 0.5% 0 1% 0;
 }
 
 nav li {
     display: inline-block;
-    font-size: 12px;
+    font-size: 80%;
     padding-right: 1%;
 }
 
@@ -52,44 +61,47 @@ nav a {
     height: 500px;
     margin: 1% 0;
     overflow: hidden;
-    /* debugging */
-    /* background-color: rgb(187, 178, 53); */
-}
-
-.layer {
-    width: 100%;
-    height: 500px;
-    background-color: rgba(0, 0, 0, 0.3);
-    position: relative;
-    z-index: 1;
+    border-radius: 5px;
 }
 
 .banner img {
-    width: 100%;
-    vertical-align: middle;
-    position: relative;
-    top: -130%;
-    z-index: 0;
+    top: -100%;
+    height: 500px;
+}
+
+.banner span {
+    padding-left: 3%;
+    display: block;
+    color: white;
+}
+
+#first_span {
+    font-size: 130%;
+    padding-top: 30%;
+    line-height: 1.4;
+}
+
+#second_span {
+    font-size: 90%;
+    line-height: 1.3;
+    padding-bottom: 5%;
 }
 
 /* regole corpo pagina */
-.title, .widget, .articolo {
-    /* debugging */
-    background-color: rgb(119, 161, 189);
+h1 {
+    padding-top: 2%;
 }
 
-.title {
-    width: 100%;
-    /* debugging */
-    height: 100px;
+.title span {
+    font-size: 100%;
+    color: lightgrey;
+    padding-bottom: 2%;
+    display: block;
 }
 
 /* regole float */
 .container {
     width: 100%;
-    padding: 2% 0;
-    /* debugging */
-    background-color: rgb(30, 139, 212);
 }
 
 .clearfix::after {
@@ -104,15 +116,41 @@ nav a {
 
 .widget {
     width: 20%;
-    /* debugging */
-    height: 500px;
 }
 
 .articolo {
     width: 56%;
     margin: 0 2%;
-    /* debugging */
-    height: 500px;
+}
+
+/* regole immagini */
+.immagini {
+    width: 100%;
+    border-radius: 5px;
+    height: 200px;
+}
+
+.immagini .layer {
+    height: 200px;
+}
+
+.immagini img {
+    height: 200px;
+    top: -100%;
+}
+
+/* regole testo colonne */
+.widget h3 {
+    padding: 3% 0;
+}
+
+.articolo h3 {
+    padding: 1% 0;
+}
+
+.widget p, .articolo p {
+    font-size: 80%;
+    line-height: 1.5;
 }
 
 /* regole footer */
@@ -120,6 +158,17 @@ footer {
     width: 100%;
     height: 80px;
     margin-top: 1%;
-    /* debugging */
-    background-color: rgb(127, 43, 160);
+    text-align: center;
+}
+
+footer span {
+    line-height: 80px;
+    vertical-align: middle;
+    font-size: 70%;
+}
+
+footer span::after {
+    content: '\2764';
+    color: red;
+    padding-left: 0.5%;
 }
