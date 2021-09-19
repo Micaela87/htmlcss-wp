@@ -15,23 +15,6 @@ body {
     margin: 0 auto;
 }
 
-.layer {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    position: relative;
-    z-index: 1;
-    border-radius: 5px;
-    height: 500px;
-}
-
-img {
-    width: 100%;
-    position: relative;
-    z-index: 0;
-    border-radius: 5px;
-    object-fit: cover;
-}
-
 /* regole navbar */
 nav ul {
     padding: 0.5% 0 1% 0;
@@ -49,7 +32,7 @@ nav a {
 }
 
 /* regole logo */
-.logo img {
+.logo {
     width: 10%;
     border-right: solid 1px lightgrey;
     padding: 0.5% 1% 0.5% 0;
@@ -65,7 +48,21 @@ nav a {
 }
 
 .banner img {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    z-index: 0;
     top: -100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.layer {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
     height: 500px;
 }
 
@@ -130,13 +127,24 @@ h1 {
     height: 200px;
 }
 
-.immagini .layer {
+.immagini::after {
+    content: "";
+    display: block;
+    width: 100%;
     height: 200px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+    top: -100%;
+    border-radius: 5px;
 }
 
 .immagini img {
+    width: 100%;
     height: 200px;
-    top: -100%;
+    display: block;
+    border-radius: 5px;
+    object-fit: cover;
 }
 
 /* regole testo colonne */
